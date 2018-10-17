@@ -73,7 +73,9 @@
                 android:id="@+id/shape"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/colored_rect"/>
+                android:src="@drawable/colored_oval"
+                android:layout_gravity="center"
+                />
 
         </FrameLayout>
 
