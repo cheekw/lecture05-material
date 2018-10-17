@@ -1,7 +1,5 @@
 package edu.uw.materialdemo;
 
-import android.app.ActivityOptions;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
         //set the XML toolbar as the ActionBar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -55,10 +54,11 @@ public class MainActivity extends AppCompatActivity {
 //                snack.show();
 
                 //transition this single item
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, (View)button, "same_fab");
+                //NO LONGER WORKS ON EMULATOR
+//                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, (View)button, "same_fab");
 
                 // start the new activity
-                startActivity(new Intent(MainActivity.this, ScrollingActivity.class), options.toBundle());
+//                startActivity(new Intent(MainActivity.this, ScrollingActivity.class), options.toBundle());
             }
         });
 
